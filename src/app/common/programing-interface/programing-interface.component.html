@@ -1,0 +1,11 @@
+
+<div cdkDropList cdkDropListSortingDisabled cdkDropListOrientation="horizontal" class="static-list" (cdkDropListDropped)="drop($event)">
+  <div class="static-box" *ngFor="let allowedAction of allowedActions" cdkDrag>{{allowedAction.toLocaleString()}}</div>
+</div>
+
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  <div class="example-box" *ngFor="let movie of movies" cdkDrag>
+    <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+    {{movie}}
+  </div>
+</div>
